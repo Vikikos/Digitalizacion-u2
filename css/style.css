@@ -94,3 +94,25 @@ main{
        height: 80%;
     }
 }
+
+@media (width <= 900px) {
+    header{
+        nav{
+            align-items: center;
+            .div__icon-menu{
+                display: block;
+                width: 50px;
+            } 
+            ul{
+                display: none;
+            }
+        }
+        nav:hover{
+            ul{
+                display: flex;
+            }
+        }
+    }
+    
+    
+}
