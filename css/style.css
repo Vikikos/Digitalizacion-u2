@@ -74,6 +74,9 @@ body:has(#icon-menu:checked){
             }
         }
     }
+ul{
+    list-style-image: url('../assests/img/icons/icon-ul.png');
+}
 img{
     width: 100%;
 }
@@ -99,10 +102,10 @@ img{
     width: 50px;
     height: 50px;
     appearance: none;
-    background-image: url('/assests/img/icons/menu-bars.svg');
+    background-image: url('../assests/img/icons/menu-bars.svg');
 }
 #icon-menu:checked{
-    background-image: url('/assests/img/icons/menu-close.png');
+    background-image: url('../assests/img/icons/menu-close.png');
     background-position: center;
     background-size: 36px 36px;
     background-repeat: no-repeat;
@@ -214,7 +217,7 @@ main{
 }
 .ul__puntos-clave{
     padding: 0 1em;
-    list-style-image: url('/assests/img/icons/icon-ul.png');
+    list-style-image: url('../assests/img/icons/icon-ul.png');
 }
 .ul__links{
     list-style: none;
@@ -272,9 +275,7 @@ main{
     }
 }
 
-ul{
-    list-style-image: url('assests/img/icons/icon-ul.png');
-}
+
 @media (width <= 1200px) {
     .div__imagen-bc{
         img{
