@@ -21,59 +21,6 @@ body{
     background: linear-gradient(203deg,rgba(244, 255, 252, 1) 0%, rgba(209, 239, 133, 1) 20%, rgba(195, 233, 86, 1) 42%, rgba(184, 222, 80, 1) 55%, rgba(77, 113, 17, 1) 83%, rgba(31, 75, 44, 1) 100%);
     background-size: 120%;
 }
-body:has(#icon-menu:checked){
-        
-        .ul__menu{
-            position: absolute;
-            height: 50vh;
-            width: 100%;
-
-            margin: 0;
-            margin-top: calc(0.8em + 93px) ;
-
-            z-index: 45;
-            top: 0;
-            left: 0;
-
-            background-color: var(--light-green);
-
-            display: flex;
-            flex-direction: column;
-
-            padding: 1.2em;
-
-            box-shadow: inset 10px 10px 10px rgba(31,75,44,0.05),
-                        10px 15px 10px rgba(31,75,44,0.1),
-                        10px 15px 20px rgba(31,75,44,0.05),
-                        inset -10px -10px 25px rgba(255, 255, 255, 0.562);
-
-            border: 1px solid rgba(255, 255, 255, 0.671);
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            li{
-                width: 100%;
-                a{
-                    display: block;
-                    color: var(--letter-green);
-                    text-decoration: none;
-                    padding: 0.5em;
-                }
-                a:hover{
-                    background-color: var(--bg-white);
-                    box-shadow: inset 10px 10px 10px rgba(31,75,44,0.05),
-                    10px 15px 10px rgba(31,75,44,0.1),
-                    10px 15px 20px rgba(31,75,44,0.05),
-                    inset -10px -10px 25px rgba(255, 255, 255, 0.562);
-
-                    border: 1px solid rgba(255, 255, 255, 0.671);
-                    border-radius: 10px;
-
-                    background-color: var(--bg-white);
-                    backdrop-filter: blur(10px);
-                }
-            }
-        }
-    }
 ul{
     list-style-image: url('../assests/img/icons/icon-ul.png');
 }
@@ -96,20 +43,6 @@ img{
     background-color: var(--bg-white);
     backdrop-filter: blur(10px);
 }
-
-#icon-menu{
-    display: block;
-    width: 50px;
-    height: 50px;
-    appearance: none;
-    background-image: url('../assests/img/icons/menu-bars.svg');
-}
-#icon-menu:checked{
-    background-image: url('../assests/img/icons/menu-close.png');
-    background-position: center;
-    background-size: 36px 36px;
-    background-repeat: no-repeat;
-}
 header{
     display: flex;
     flex-direction: row;
@@ -126,7 +59,7 @@ header{
             display: flex;
             flex-direction: row;
 
-            display: none;
+            /* display: none; */
             li{
                 padding: 0 0.5em;
                 a{
@@ -140,6 +73,9 @@ header{
         }
     }
 } 
+#icon-menu{
+    display: none;
+}
 footer{
     div{
         color: var(--letter-green);
@@ -183,7 +119,6 @@ main{
     justify-content: start;
     align-items: center;
     h1{
-        position: absolute;
         /* bottom: 0; */
         padding: 1em;
         color: var(--letter-green);
@@ -191,8 +126,14 @@ main{
         font-size: 2.5em;
         font-style: italic;
     }
+}
+.div__grid-portada{
+    display: grid;
+    grid-template-columns: 
+    repeat(auto-fit, minmax(200px , 1fr));
     img{
-       height: 80%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
     }
 }
 
@@ -283,12 +224,129 @@ main{
 .img_round-corn{
     border-radius: 0.5em;
 }
+/* GLOSARIO */
+
+.div__plabra{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.div__definicion{
+    background-color: var(--bg-white);
+    padding: 1em;
+    box-shadow: inset 2px 2px 7px var(--green);
+    display: none;
+    height: auto;
+}
+.mostrar{
+    display: block;
+    animation: mostar-definicion 0.5s ease-in;
+    overflow: hidden;
+}
+@keyframes mostar-definicion {
+    0%{
+        height: 0px;
+        padding: 0 1em;
+    }
+    100%{
+        height: 140px;
+    }
+}
+.ocultar{
+    display: none;
+}
+.button_definicion{
+    font-family:  "Cormorant", serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    appearance: none;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    img{
+        filter: drop-shadow(2px 2px 1px var(--green));
+    }
+}
 @media (width <= 1200px) {
     .div__imagen-bc{
         img{
             max-width: 300px;
         }
     }  
+    #icon-menu{
+        display: block;
+        width: 50px;
+        height: 50px;
+        appearance: none;
+        background-image: url('../assests/img/icons/menu-bars.svg');
+    }
+    #icon-menu:checked{
+        background-image: url('../assests/img/icons/menu-close.png');
+        background-position: center;
+        background-size: 36px 36px;
+        background-repeat: no-repeat;
+    }
+    header{
+        .ul__menu{
+            display: none;
+        }
+    }
+    body:has(#icon-menu:checked){
+        
+        .ul__menu{
+            position: absolute;
+            height: 60vh;
+            width: 100%;
+
+            margin: 0;
+            margin-top: calc(0.8em + 93px) ;
+
+            z-index: 45;
+            top: 0;
+            left: 0;
+
+            background-color: var(--light-green);
+
+            display: flex;
+            flex-direction: column;
+
+            padding: 1.2em;
+
+            box-shadow: inset 10px 10px 10px rgba(31,75,44,0.05),
+                        10px 15px 10px rgba(31,75,44,0.1),
+                        10px 15px 20px rgba(31,75,44,0.05),
+                        inset -10px -10px 25px rgba(255, 255, 255, 0.562);
+
+            border: 1px solid rgba(255, 255, 255, 0.671);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            li{
+                width: 100%;
+                a{
+                    display: block;
+                    color: var(--letter-green);
+                    text-decoration: none;
+                    padding: 0.5em;
+                }
+                a:hover{
+                    background-color: var(--bg-white);
+                    box-shadow: inset 10px 10px 10px rgba(31,75,44,0.05),
+                    10px 15px 10px rgba(31,75,44,0.1),
+                    10px 15px 20px rgba(31,75,44,0.05),
+                    inset -10px -10px 25px rgba(255, 255, 255, 0.562);
+
+                    border: 1px solid rgba(255, 255, 255, 0.671);
+                    border-radius: 10px;
+
+                    background-color: var(--bg-white);
+                    backdrop-filter: blur(10px);
+                }
+            }
+        }
+    }
 }
 
 @media (width <= 770px){
@@ -305,5 +363,10 @@ main{
         padding: 0.2em;
         /* width: 60vw; */
     }
-    
+    .div__plabra{
+        h2{
+            font-size: 1.2em;
+            max-width: 220px;
+        }
+    }
 }

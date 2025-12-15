@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glosario</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <header class="bg-sec">
@@ -22,20 +23,23 @@
                 <li><a href="smart-factory.html">Smart Factory</a></li>
                 <li><a href="auto-vision.html">Automatización y Visión Artificial</a></li>
                 <li><a href="thd.html">Implementacion THD</a></li>
+                <li><a href="glosario.html">Glosario</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="bg-sec">
+        <section class="bg-sec sec__titulo">
             <h1 class="h1__titulo">Glosario</h1>
         </section>
         <section class="bg-sec">
             <ul class="ul__glosario ul__links">
-                <li>8-12 terminos</li>
-                <li>
+                <li class="bottonDefinicion">
                     <div class="div__plabra">
                         <h2 class="h2__puntos-clave">IA</h2>
-                        <button>Ver mas</button>
+                        <button class="button_definicion">
+                            Definición
+                            <img src="assests/img/icons/icono-ver-mas.png" alt="boton ver definicion">
+                        </button>
                     </div>
                     <div class="div__definicion">
                         <p class="p__text">
@@ -46,11 +50,122 @@
                         </p>
                     </div>
                 </li>
+                <li class="bottonDefinicion">
+                    <div class="div__plabra">
+                        <h2 class="h2__puntos-clave">Tecnologías Habilitadoras Digitales (THD)</h2>
+                        <button class="button_definicion">
+                            Definición
+                            <img src="assests/img/icons/icono-ver-mas.png" alt="boton ver definicion">
+                        </button>
+                    </div>
+                    <div class="div__definicion">
+                        <p class="p__text">
+                            Conjunto de tecnologías clave que hacen posible la transformación digital y el desarrollo de la Industria 4.0. Incluyen herramientas como 
+                            inteligencia artificial, blockchain, 5G, big data, robótica y realidad virtual. Su función es mejorar la conectividad, automatización, 
+                            análisis de datos y toma de decisiones, permitiendo modelos de negocio más eficientes, flexibles y orientados a la innovación continua.
+                        </p>
+                    </div>
+                </li>
+                <li class="bottonDefinicion">
+                    <div class="div__plabra">
+                        <h2 class="h2__puntos-clave">5G</h2>
+                        <button class="button_definicion">
+                            Definición
+                            <img src="assests/img/icons/icono-ver-mas.png" alt="boton ver definicion">
+                        </button>
+                    </div>
+                    <div class="div__definicion">
+                        <p class="p__text">
+                            Tecnología de red móvil de nueva generación caracterizada por su alta velocidad, baja latencia y capacidad para conectar millones de dispositivos 
+                            simultáneamente. Es fundamental para el desarrollo del Internet de las Cosas, los vehículos autónomos y los servicios críticos como la salud o la 
+                            seguridad. Permite comunicaciones casi en tiempo real, facilitando aplicaciones avanzadas que requieren fiabilidad y respuesta inmediata.
+                        </p>
+                    </div>
+                </li>
+                <li class="bottonDefinicion">
+                    <div class="div__plabra">
+                        <h2 class="h2__puntos-clave">Blockchain</h2>
+                        <button class="button_definicion">
+                            Definición
+                            <img src="assests/img/icons/icono-ver-mas.png" alt="boton ver definicion">
+                        </button>
+                    </div>
+                    <div class="div__definicion">
+                        <p class="p__text">
+                            Sistema de registro de información descentralizado basado en una cadena de bloques enlazados criptográficamente. Garantiza la seguridad, 
+                            trazabilidad e inmutabilidad de los datos, ya que cualquier modificación es fácilmente detectable. Aunque es conocida por su uso en criptomonedas, 
+                            tiene aplicaciones en contratos inteligentes, gestión de la propiedad intelectual, trazabilidad de productos y sistemas de confianza sin intermediarios.
+                        </p>
+                    </div>
+                </li>
+                <li class="bottonDefinicion">
+                    <div class="div__plabra">
+                        <h2 class="h2__puntos-clave">Big Data</h2>
+                        <button class="button_definicion">
+                            Definición
+                            <img src="assests/img/icons/icono-ver-mas.png" alt="boton ver definicion">
+                        </button>
+                    </div>
+                    <div class="div__definicion">
+                        <p class="p__text">
+                            Tecnología orientada al procesamiento y análisis de grandes volúmenes de datos que no pueden gestionarse con herramientas tradicionales. Permite descubrir 
+                            patrones, tendencias y relaciones ocultas en sectores como la sanidad, el marketing, las ciudades inteligentes o el medioambiente. Su valor radica en 
+                            transformar datos masivos y caóticos en información útil para la toma de decisiones estratégicas.
+                        </p>
+                    </div>
+                </li>
+                <li class="bottonDefinicion">
+                    <div class="div__plabra">
+                        <h2 class="h2__puntos-clave">Robótica Colaborativa (Cobots)</h2>
+                        <button class="button_definicion">
+                            Definición
+                            <img src="assests/img/icons/icono-ver-mas.png" alt="boton ver definicion">
+                        </button>
+                    </div>
+                    <div class="div__definicion">
+                        <p class="p__text">
+                            Tipo de robótica diseñada para trabajar de forma segura junto a personas en entornos compartidos. Los cobots cuentan con sensores y sistemas inteligentes que 
+                            les permiten detectar la presencia humana y ajustar su comportamiento. Se emplean para realizar tareas repetitivas o peligrosas, mejorando la productividad, 
+                            reduciendo riesgos laborales y favoreciendo la colaboración entre humanos y máquinas.
+                        </p>
+                    </div>
+                </li>
+                <li class="bottonDefinicion">
+                    <div class="div__plabra">
+                        <h2 class="h2__puntos-clave">Gemelos Digitales</h2>
+                        <button class="button_definicion">
+                            Definición
+                            <img src="assests/img/icons/icono-ver-mas.png" alt="boton ver definicion">
+                        </button>
+                    </div>
+                    <div class="div__definicion">
+                        <p class="p__text">
+                            Representaciones virtuales de objetos, procesos o sistemas reales que permiten simular su comportamiento en tiempo real. Se utilizan para analizar, optimizar y 
+                            predecir el rendimiento antes de realizar cambios físicos. Son clave en ingeniería, manufactura y ciudades inteligentes, ya que reducen costes, anticipan fallos 
+                            y mejoran la toma de decisiones durante todo el ciclo de vida de un producto.
+                        </p>
+                    </div>
+                </li>
+                <li class="bottonDefinicion">
+                    <div class="div__plabra">
+                        <h2 class="h2__puntos-clave">Industria 4.0</h2>
+                        <button class="button_definicion">
+                            Definición
+                            <img src="assests/img/icons/icono-ver-mas.png" alt="boton ver definicion">
+                        </button>
+                    </div>
+                    <div class="div__definicion">
+                        <p class="p__text">
+                            La Industria 4.0 es la cuarta revolución industrial y se basa en la digitalización y automatización inteligente de los procesos productivos. Integra tecnologías como 
+                            inteligencia artificial, Internet de las Cosas, big data, robótica y sistemas ciberfísicos para crear fábricas conectadas, eficientes y flexibles, capaces de tomar 
+                            decisiones en tiempo real y adaptarse a las necesidades del mercado.
+                        </p>
+                    </div>
+                </li>
             </ul>
-            para mostrar u ocultar definiciones.
         </section>
     </main>
-    <footer>
+    <footer class="bg-sec">
         <div>2025 &#64; Viktoria Kosarova</div>
     </footer>
 </body>
