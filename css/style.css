@@ -274,8 +274,15 @@ main{
         min-width: 50vw;
     }
 }
-
-
+.ul-in-ul{
+    padding-left: 2em;
+}
+.ul__caracte-prin{
+    padding: 0 1em;
+}
+.img_round-corn{
+    border-radius: 0.5em;
+}
 @media (width <= 1200px) {
     .div__imagen-bc{
         img{
